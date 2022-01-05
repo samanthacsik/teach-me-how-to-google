@@ -1,5 +1,4 @@
 ## **Teach Me How to Google**
-#### *What do to when your code stops working (or you're just not sure where to even begin)*
 
 Googling for code help is something that all data scientists (at all career stages) do. But figuring out how to get the information you need back can be incredibly challenging, particularly for new coders. In this workshop, we’ll discuss strategies for refining your queries to increase your chances of finding informative solutions.
 
