@@ -311,7 +311,7 @@ Check out some of these additional resources for common R error messages and str
 
 <span style = 'font-size: 75%;'>While documentation can sometimes be tricky to read, it provides critical info for understanding how to use a package or function.</span>
 
-<span style = 'font-size: 75%;'>Access the documentation for any loaded package or function by either typing `?function_name` or `help(function_name)` in your console. If you search for a package that is not currently loaded, R will prompt you to type `??function_name`.</span>
+<span style = 'font-size: 75%;'>Access the documentation for any loaded package or function by either typing `?function_name` or `help(function_name)` in your console. If you search for a function from a package that is not currently loaded, R will prompt you to type `??function_name`.</span>
 
 --
 
@@ -694,53 +694,20 @@ More than one solution may exist for each problem -- I'd love to hear about the 
 ---
 ## Problem 1
 
-**Goal:** Determine why the running following code returns an error.
-
-```{r, echo = TRUE, error = TRUE}
-library(palmerpenguins)
-gentoo_penguins <- penguins %>% 
-  filter(species == "Gentoo")
-```
-
----
-## Problem 1 (a solution)
-
-**Goal:** Determine why the running following code returns an error.
-
-```{r, echo = TRUE, eval = TRUE, warning = TRUE, error = TRUE}
-library(tidyverse) #<< 
-# or import the {dplyr} or {magrittr} pkgs (both part of the tidyverse)
-library(palmerpenguins)
-gentoo_penguins <- penguins %>%
-  filter(species == "Gentoo")
-```
-
----
-## Problem 2
-
-**Goal:** 
-
----
-## Problem 2 (a solution)
-
-**Goal:** 
-
----
-## Problem 3
-
 **Goal:** You have two data sets, `a` and `b`. Each contain the same attributes (i.e. columns) -- `month`, `season`, and `daylight_savings`. Identify which records (i.e. rows of data) in data table `a` are not contained in data table `b`.
 
 ```{r, echo = TRUE, eval = FALSE}
 a <- data.frame(month = c("October", "November", "December", "January", "February"),
                 season = c("Fall", "Fall", "Winter", "Winter", "Winter"),
                 daylight_savings = c("yes", "partly", "no", "no", "no"))
+
 b <- data.frame(month = c("October", "December", "February"),
                 season = c("Fall", "Winter", "Winter"),
                 daylight_savings = c("yes", "no", "no"))
 ```
 
 ---
-## Problem 3 (a solution)
+## Problem 1 (a solution)
 
 **Goal:** You have two data sets, `a` and `b`. Each contain the same attributes (i.e. columns) -- `month`, `season`, and `daylight_savings`. Identify which records (i.e. rows of data) in data table `a` are not contained in data table `b`.
 
@@ -748,9 +715,182 @@ b <- data.frame(month = c("October", "December", "February"),
 a <- data.frame(month = c("October", "November", "December", "January", "February"),
                 season = c("Fall", "Fall", "Winter", "Winter", "Winter"),
                 daylight_savings = c("yes", "partly", "no", "no", "no"))
+
 b <- data.frame(month = c("October", "December", "February"),
                 season = c("Fall", "Winter", "Winter"),
                 daylight_savings = c("yes", "no", "no"))
+
 difference <- anti_join(a, b) #<<
 difference
+```
+
+---
+## Problem 2
+
+**Goal:** Modify the following code such that it sorts any **blue** animals from the `animals` vector into the `blue_animals` vector.
+
+```{r, echo = TRUE, eval = FALSE}
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ vector of animals  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+animals <- c("blue tang", "red panda", "Blue jay",
+             "green sea turtle", "blue morpho butterfly", 
+             "Blue iguana", "Red squirrel")
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ initialize empty vector to store blue-colored animals  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+blue_animals <- c()
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ sort blue animals into their own list  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+for (i in 1:length(animals)){
+  
+  current_animal <- animals[i]
+  
+  if(isTRUE(str_detect(current_animal, "blue"))){
+    
+    message("The '", current_animal, "' is a blue animal")
+    
+    blue_animals <- current_animal
+    
+  }
+  
+}
+
+```
+
+---
+
+## Problem 2 (a solution)
+
+**Goal:** Modify the following code such that it sorts any **blue** animals from the `animals` vector into the `blue_animals` vector.
+
+```{r echo = TRUE, eval = FALSE}
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ vector of animals  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+animals <- c("blue tang", "red panda", "Blue jay",
+             "green sea turtle", "blue morpho butterfly", 
+             "Blue iguana", "Red squirrel")
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ initialize empty vector to store blue-colored animals  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+blue_animals <- c()
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  ~ sort blue animals into their own list  ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+for (i in 1:length(animals)){
+  
+  current_animal <- animals[i]
+  
+  if(isTRUE(str_detect(current_animal, "(?i)blue"))){ #<<
+    
+    message("The '", current_animal, "' is a blue animal")
+    
+    blue_animals <- append(blue_animals, current_animal) #<<
+    
+  }
+  
+}
+```
+
+---
+## Problem 3 (slide 1/2)
+
+**Goal:** Modify the following code (on slide 2/2) to recreate the plot below
+
+.center[
+```{r echo = FALSE, out.width = '75%'}
+knitr::include_graphics("media/penguin_plot.png")
+```
+]
+
+---
+## Problem 3 (slide 2/2)
+
+```{r echo = TRUE, eval = FALSE}
+
+library(tidyverse)
+library(palmerpenguins)
+
+ggplot(data = penguins, aes(x = species, y = body_mass_g), shape = sex) +
+  geom_point(alpha = 0.2, position = position_jitterdodge(dodge.width = 0.8)) + 
+
+  # means & standard devs
+  stat_summary(mapping = aes(color = species),
+               fun = "mean", geom = "point", size = 4) +
+  stat_summary(mapping = aes(color = species),
+               fun = "mean", geom = "errorbar", size = 1, width = 0.2,
+               fun.max = function(x) mean(x) + sd(x),
+               fun.min = function(x) mean(x) - sd(x)) +
+
+  # change colors/shapes
+  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90"), name = "Species") + 
+  scale_shape_manual(values = c(15, 16), name = "Sex") + 
+  
+  # add nicer axis labels + title + caption
+  labs(x = "Penguin Species", 
+       y = "Body Mass (g)",
+       title = "Body mass of female vs. male adelie, chinstrap, and gentoo penguins",
+       subtitle = "Colored points represent mean body mass (± SD)",
+       caption = "Data Source: Dr. Kristen Gorman, LTER Palmer Station") +
+ 
+  theme_classic() + 
+  theme(
+        plot.title = element_rect(hjust = 0, size = 14),
+        axis.text = element_text(color = "black", size = 10),
+        axis.title = element_rect(color = "black", size = 14),
+        plot.caption = element_text(size = 7, hjust = 1, color = "gray", face = "italic"),
+        panel.border = element_rect(color = "black", size = 0.7, fill = NA))
+```
+
+---
+## Problem 3 (a solution)
+
+```{r echo = TRUE, eval = FALSE}
+
+library(tidyverse)
+library(palmerpenguins)
+
+ggplot(data = na.omit(penguins), aes(x = species, y = body_mass_g, shape = sex)) + #<<
+  geom_point(alpha = 0.2, position = position_jitterdodge(dodge.width = 0.8)) + 
+
+  # means & standard devs
+  stat_summary(mapping = aes(color = species),
+               fun = "mean", geom = "point", size = 4,
+               position = position_dodge(width = 0.8)) + #<<
+  stat_summary(mapping = aes(color = species),
+               fun = "mean", geom = "errorbar", size = 1, width = 0.2,
+               fun.max = function(x) mean(x) + sd(x),
+               fun.min = function(x) mean(x) - sd(x),
+               position = position_dodge(width = 0.8)) + #<<
+
+  # change colors/shapes
+  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90"), name = "Species") + 
+  scale_shape_manual(values = c(15, 16), name = "Sex") + 
+  
+  # add nicer axis labels + title + caption
+  labs(x = "Penguin Species", 
+       y = "Body Mass (g)",
+       title = "Body mass of female vs. male adelie, chinstrap, and gentoo penguins",
+       subtitle = "Colored points represent mean body mass (± SD)",
+       caption = "Data Source: Dr. Kristen Gorman, LTER Palmer Station") +
+ 
+  theme_classic() + 
+  theme(
+        plot.title = element_text(hjust = 0, size = 14), #<<
+        axis.text = element_text(color = "black", size = 10),
+        axis.title = element_text(color = "black", size = 14), #<<
+        plot.caption = element_text(size = 7, hjust = 1, color = "gray", face = "italic"),
+        panel.border = element_rect(color = "black", size = 0.7, fill = NA))
 ```
