@@ -8,9 +8,9 @@ This talk was originally developed by [Samantha Csik](https://samanthacsik.githu
 
 The original slides can be found on the [UCSB-MEDS GitHub Organization](https://github.com/UCSB-MEDS/teach-me-how-to-google). Slides have been adapted for a number of presentations. Versions are organized by date below:
 
-* [**Master's in Techology Management, Winter 2022**](slides/MTM-2022-01-06.Rmd)  
+* [**Master's in Techology Management, Winter 2022**](slides/MTM-2022-01-06.html)  
 *January 6th, 2022*
 
-* [**MEDS, Fall 2021 (original slides)**](slides/MEDS-2021-10-11.Rmd)  
+* [**MEDS, Fall 2021 (original slides)**](slides/MEDS-2021-10-11.html)  
 *October 10th, 2021*
 
