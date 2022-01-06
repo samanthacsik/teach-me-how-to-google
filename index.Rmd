@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## **Teach Me How to Google**
 
-* [**Master of Techology Management, Winter 2022**](slides/MTM-2022-01-06.html)  
+* [**Master of Techology Management, Winter 2022**](slides/TMP-2022-01-06.html)  
 *January 6th, 2022*
 
 * [**Master of Environmental Data Science, Fall 2021 (original slides)**](slides/MEDS-2021-10-11.html)  
