@@ -2,7 +2,7 @@
 title: "Teach Me How to Google"
 subtitle: "<span style = 'font-size: 50%;'>*What do to when your code stops working (or you're just not sure where to even start)*</span>"
 author: "Sam Csik | Data Training Coordinator<br><span style = 'font-size: 65%;'>National Center for Ecological Analysis & Synthesis<br></span>"
-date: "<span style = 'font-size: 85%;'>R-Ladies St. Louis | February 2022</span><br><span style = 'font-size: 65%;'>Slides & source code available on [GitHub](https://github.com/UCSB-MEDS/teach-me-how-to-google)</span>"
+date: "<span style = 'font-size: 85%;'>R-Ladies St. Louis | February 2022</span><br><span style = 'font-size: 65%;'>Slides & source code available on [GitHub](https://github.com/samanthacsik/teach-me-how-to-google)</span>"
 output:
   xaringan::moon_reader:
     css: ['xaringan-themer.css', 'my-css.css']
@@ -66,8 +66,11 @@ National Center for Ecological Analysis & Synthesis<br>
 
 <span style = 'font-size: 130%;'>R-Ladies St. Louis | February 2022</span>   
 
-Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/UCSB-MEDS/teach-me-how-to-google)
+Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/samanthacsik/teach-me-how-to-google)
 
+.footnote[
+[Original talk](https://github.com/UCSB-MEDS/teach-me-how-to-google) developed for the [Master of Environmental Data Science Program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) (MEDS) at UC Santa Barbara's Bren School of Environmental Science and Management.
+]
 ---
 
 ### Welcome to data science, where questions are aplenty!
