@@ -159,7 +159,7 @@ class: inverse, middle, center
 
 --
 
-<span style = 'font-size: 120%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R</span>
+<span style = 'font-size: 120%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter Kernal, SAS, SPSS, etc.) </span>
 
 --
 
@@ -188,7 +188,7 @@ class: inverse, middle, center
 
 ---
 
-### <span style = 'font-size: 120%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R</span>
+### <span style = 'font-size: 100%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter Kernal, SAS, SPSS, etc.)</span>
 
 .center[
 >"Restart R often, especially when things get weird...We install and update packages from R, which is a little bit like working on your airplane engine while you're flying."
@@ -296,20 +296,31 @@ df$x
 Revisit A.Horst's lab materials from EDS 221: https://allisonhorst.github.io/EDS_221_programming-essentials/interactive_sessions/day_9_interactive.html#2_Basics_-_troubleshooting_practice__tips
 
 ---
-
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("exclamation-triangle", fill = "#05859B", a11y = "sem")`  Read that error message!</span>
 
-Check out some of these additional resources for common R error messages and strategies for fixing them:
+Check out some of these additional resources for common error messages and strategies for fixing them:
 
-  * [Common R Error Messages](https://www.programmingr.com/r-error-messages/), on [ProgrammingR](https://www.programmingr.com/)
+**R:**
+
+  * <span style = 'font-size: 80%;'>[Common R Error Messages](https://www.programmingr.com/r-error-messages/), on [ProgrammingR](https://www.programmingr.com/)</span>
     
-  * [Common R Programming Errors Faced by Beginners](https://www.r-bloggers.com/2016/06/common-r-programming-errors-faced-by-beginners/), on [R-bloggers](https://www.r-bloggers.com/)
+  * <span style = 'font-size: 80%;'>[Common R Programming Errors Faced by Beginners](https://www.r-bloggers.com/2016/06/common-r-programming-errors-faced-by-beginners/), on [R-bloggers](https://www.r-bloggers.com/)</span>
     
-  * [R Error Message Cheat Sheet](http://varianceexplained.org/courses/errors/), by David Robinson on his blog, [Variance Explained](http://varianceexplained.org/)
+  * <span style = 'font-size: 80%;'>[R Error Message Cheat Sheet](http://varianceexplained.org/courses/errors/), by David Robinson on his blog, [Variance Explained](http://varianceexplained.org/)</span>
     
-  * [How to: Interpret Common Errors in R](https://warin.ca/posts/rcourse-howto-interpretcommonerrors/), by [Thierry Warin](https://warin.ca/)
+  * <span style = 'font-size: 80%;'>[How to: Interpret Common Errors in R](https://warin.ca/posts/rcourse-howto-interpretcommonerrors/), by [Thierry Warin](https://warin.ca/)</span>
+  
+**Python:**
+
+* <span style = 'font-size: 80%;'>[Common error messages (and how to fix them)](https://github.com/JonathanReeve/course-computational-literary-analysis/blob/master/Resources/errors.md), by [Jonathan Reeve](https://github.com/JonathanReeve) as part of the [Introduction to Computational Literary Analysis](Introduction to Computational Literary Analysis) course at UC Berkeley</span>
+
+**SAS:**
+
+* <span style = 'font-size: 80%;'>[Common Error Messages in SAS](https://stats.oarc.ucla.edu/sas/modules/common-error-messages-in-sas/), by [UCLA's Advanced Research Computing Group](https://stats.oarc.ucla.edu/)</span>
+
+* <span style = 'font-size: 80%;'>[Diagnosing and Avoiding Errors](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/basess/n0qrfzc32pn7n6n1usggo9hw8jup.htm), from the [SAS Programming Documentation](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/pgmsaswlcm/home.htm)</span>
+
 ---
-
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("file-alt", fill = "#05859B", a11y = "sem")`  Double-check the documentation</span>
 
 <span style = 'font-size: 75%;'>While documentation can sometimes be tricky to read, it provides critical info for understanding how to use a package or function.</span>
@@ -463,7 +474,7 @@ class: inverse, middle, center
 ]
 
 ---
-## A curated **vocabulary list** of R terminology may help
+## A curated **vocabulary list** of language-specific terminology may help
 
 `r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  Hadley Wickham lists functions that he believes constitute a good working vocabulary for R fluency in his book, [Advanced R (first edition)](http://adv-r.had.co.nz/Vocabulary.html).
 
@@ -548,7 +559,7 @@ class: inverse, middle, center
 
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("code", fill = "#05859B", a11y = "sem")`  Plan your approach by writing pseudocode</span>
 
-<span style = 'font-size: 90%;'>[Pseudocode](https://en.wikipedia.org/wiki/Pseudocode) is a step-by-step written "outline" of your code that you can then transcribe into a programming language (in our case, likely R). It is written in plain language (e.g. English), but uses the structural conventions of a programming language.</span>
+<span style = 'font-size: 90%;'>[Pseudocode](https://en.wikipedia.org/wiki/Pseudocode) is a step-by-step written "outline" of your code that you can then transcribe into a programming language (the example below is pseudocode translated to R). It is written in plain language (e.g. English), but uses the structural conventions of a programming language.</span>
 
 ```{r echo = TRUE, eval = FALSE}
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -593,7 +604,7 @@ Code comments are great, but variable and function names that explain what they 
 
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("check", fill = "#05859B", a11y = "sem")`  Build in checks</span>
 
-<span style = 'font-size: 70%;'>The function below converts a temperature between Celsius and Fahrenheit, and vice versa. It takes three arguments:</span>
+<span style = 'font-size: 70%;'>The function below (written in R) converts a temperature between Celsius and Fahrenheit, and vice versa. It takes three arguments:</span>
 
   - <span style = 'font-size: 70%;'>`from`: a string, either "fahrenheit" or "celsius"</span> 
   - <span style = 'font-size: 70%;'>`to`: a string, either "fahrenheit" or "celsius"</span>
