@@ -159,7 +159,7 @@ class: inverse, middle, center
 
 --
 
-<span style = 'font-size: 120%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter Kernal, SAS, SPSS, etc.) </span>
+<span style = 'font-size: 120%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter kernel, SAS, SPSS, etc.) </span>
 
 --
 
@@ -188,7 +188,7 @@ class: inverse, middle, center
 
 ---
 
-### <span style = 'font-size: 100%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter Kernal, SAS, SPSS, etc.)</span>
+### <span style = 'font-size: 100%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter kernel, SAS, SPSS, etc.)</span>
 
 .center[
 >"Restart R often, especially when things get weird...We install and update packages from R, which is a little bit like working on your airplane engine while you're flying."
