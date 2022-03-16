@@ -8,6 +8,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## **Teach Me How to Google**
 
+* [**StatLab, Brown School, Washington University in St. Louis**](slides/WashUStatLab-2022-03-24.html)  
+*March 24th, 2022*
+
 * [**R-Ladies St. Louis, February 2022**](slides/RLadiesSTL-2022-02-22.html)  
 *February 22nd, 2022*
 
