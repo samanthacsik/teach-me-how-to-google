@@ -191,7 +191,7 @@ class: inverse, middle, center
 ### <span style = 'font-size: 100%;'>`r fontawesome::fa("power-off", fill = "#05859B", a11y = "sem")`  Restart R (or your Jupyter kernel, SAS, SPSS, etc.)</span>
 
 .center[
->"Restart R often, especially when things get weird...We install and update packages from R, which is a little bit like working on your airplane engine while you're flying."
+>*"Restart R often, especially when things get weird...We install and update packages from R, which is a little bit like working on your airplane engine while you're flying."*
 
 .right[
 <span style = 'font-size: 60%;'>-Jenny Bryan, in her 2020 RSTUDIO::CONF keynote, [Object of type ‘closure’ is not subsettable](https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/)</span>
@@ -287,7 +287,7 @@ df$x
 
 <span style = 'font-size: 65%;'>If you feel incredibly frustrated by this error, well, welcome to the club! Jenny Bryan writes:</span> 
 
-> <span style = 'font-size: 65%;'>Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming!</span>
+> <span style = 'font-size: 65%;'>*Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming!*</span>
 
 <span style = 'font-size: 65%;'>This error often arises when you attempt to subset a function (i.e. treat a function in a way that it is shouldn't be). Here, we forgot that we called called our object `dat`, and not `df`. `df()` also happens to be a function that gives you the density of the 'F' distribution and we are attempting to subset a column (`x`) from it.</span>
 
