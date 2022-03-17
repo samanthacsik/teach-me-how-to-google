@@ -323,13 +323,17 @@ Check out some of these additional resources for common error messages and strat
 ---
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("file-alt", fill = "#05859B", a11y = "sem")`  Double-check the documentation</span>
 
-<span style = 'font-size: 75%;'>While documentation can sometimes be tricky to read, it provides critical info for understanding how to use a package or function.</span>
+<span style = 'font-size: 70%;'>While documentation can sometimes be tricky to read, it provides critical info for understanding how to use a package or function.</span>
 
-<span style = 'font-size: 75%;'>Access the documentation for any loaded package or function by either typing `?function_name` or `help(function_name)` in your console. If you search for a function from a package that is not currently loaded, R will prompt you to type `??function_name`.</span>
+<span style = 'font-size: 70%;'>Access the documentation for any package or function that you have loaded into R by either typing `?function_name` or `help(function_name)` in your console. If you search for a function from a package that is not currently loaded, R will prompt you to type `??function_name`.</span>
+
+.footnote[
+<span style = 'font-size: 75%;'>*Similar to R,* `help()` *can be used in your Python console to return information on Python objects.*</span>
+]
 
 --
 
-<span style = 'font-size: 75%;'>Some important components:</span>
+<span style = 'font-size: 70%;'>Some important components:</span>
 
   <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Usage:** shows the various arguments to need to specify. Some are necessary, some are optional. Default values are shown here.</span>
   
@@ -343,7 +347,7 @@ Check out some of these additional resources for common error messages and strat
 
 --
 
-<span style = 'font-size: 75%;'>Some packages will also have **vignettes**, which provide more detailed descriptions of how functions within a package should be used. Googling `package_name vignette` will usually get you there (e.g. check out the [dplyr vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)).</span>
+<span style = 'font-size: 70%;'>Some R packages will also have **vignettes**, which provide more detailed descriptions of how functions within a package should be used. Googling `package_name vignette` will usually get you there (e.g. check out the [dplyr vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)).</span>
     
 ---
 
@@ -382,7 +386,7 @@ I'll also note that I tend to combine this 'rubber ducky debugging' method with 
 
 <span style = 'font-size: 100%;'>`r fontawesome::fa("google", fill = "#05859B", a11y = "sem")`  General Googling tips:</span>
 
-  - <span style = 'font-size: 75%;'>[r] + error message</span>
+  - <span style = 'font-size: 75%;'>[language/software] + error message</span>
   - <span style = 'font-size: 75%;'>error message + function or package name</span>
   - <span style = 'font-size: 75%;'>sometimes even just the error message alone with suffice</span>
 
@@ -715,9 +719,11 @@ class: inverse, middle, center
 
 ## `r fontawesome::fa("laptop-code", fill = "#93C6C2", a11y = "sem")` Practice problems
 
+Put your Googling and debugging skills to the test!
+
 Copy and paste the following coding challenges into an R script or Rmd file. Problems may have more than one error or missing code (be mindful, you might not even get an error message) to identify and fix.  
 
-More than one solution may exist for each problem -- I'd love to hear about the different ways people approach these, so please be prepared to share the steps (Googling, looking at documentation, reading error messages, etc.) you took with the class!  
+More than one solution may exist for each problem. Note the steps (Googling, looking at documentation, reading error messages, etc.) you take to arrive at your solution and compare with a friend!
 
 *Remember:* running code line-by-line is one of the best ways to isolate errors. 
 
