@@ -1,8 +1,5 @@
 ---
 title: "Teach Me How to Google"
-subtitle: "<span style = 'font-size: 50%;'>*What do to when your code stops working (or you're just not sure where to even start)*</span>"
-author: "Sam Csik | Data Training Coordinator<br><span style = 'font-size: 65%;'>National Center for Ecological Analysis & Synthesis<br></span>"
-date: "<span style = 'font-size: 85%;'>Master of Environmental Data Science | Fall 2021</span><br><span style = 'font-size: 65%;'>Slides & source code available on [GitHub](https://github.com/UCSB-MEDS/teach-me-how-to-google)</span>"
 output:
   xaringan::moon_reader:
     css: ['xaringan-themer.css', 'my-css.css']
@@ -64,9 +61,9 @@ National Center for Ecological Analysis & Synthesis<br>
 
 <br>
 
-<span style = 'font-size: 130%;'>Master of Environmental Data Science | Fall 2021</span>   
+<span style = 'font-size: 130%;'>ENV S 193SW Intro to Collecting & Exploiting Water Data | Fall 2022</span>   
 
-Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/UCSB-MEDS/teach-me-how-to-google)
+Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/samanthacsik/teach-me-how-to-google)
 
 ---
 
@@ -232,17 +229,17 @@ knitr::include_graphics("media/debug_bingo.png")
 
 **Helpful:** 
 ```{r, eval = TRUE, error = TRUE}
-library(tidyverse)
-library(palmerpenguins)
+library(tidyverse) # a collection of data wrangling & visualization packages
+library(palmerpenguins) # contains the 'penguins' data set
 
-# take a look at the data
+# print out the first three rows of the penguins data frame
 head(penguins, 3)
 ```
 
 --
 
 ```{r, eval = TRUE, error = TRUE}
-# what species are in this dataset?
+# what unique values are in the species column of the penguins data frame?
 unique(penguins$species)
 ```
 
@@ -305,6 +302,16 @@ Check out some of these additional resources for common R error messages and str
   * [R Error Message Cheat Sheet](http://varianceexplained.org/courses/errors/), by David Robinson on his blog, [Variance Explained](http://varianceexplained.org/)
     
   * [How to: Interpret Common Errors in R](https://warin.ca/posts/rcourse-howto-interpretcommonerrors/), by [Thierry Warin](https://warin.ca/)
+  
+.center[
+```{r echo = FALSE, out.width = '55%', fig.alt="A friendly monster has slipped on a banana peel, and says 'I know it was you, code. It breaks my heart.' Meanwhile, a little character labeled 'CODE' looks on indignantly, pointing to evil characters labeled 'mismanaged files,' 'navigating your computer', and 'typing' hiding behind a bush holding a bunch of bananas. The point being: often folks blame code for data science problems that are often caused by other underlying issues."}
+knitr::include_graphics("media/blame_code.png")
+```
+.center[
+<span style = 'font-size: 75%;'>Artwork by [@allison_horst](https://twitter.com/allison_horst?lang=en)</span>
+]
+]
+
 ---
 
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("file-alt", fill = "#05859B", a11y = "sem")`  Double-check the documentation</span>
@@ -741,87 +748,7 @@ difference
 ```
 
 ---
-## Problem 2
-
-**Goal:** Modify the following code such that it sorts any **blue** animals from the `animals` vector into the `blue_animals` vector.
-
-```{r, echo = TRUE, eval = FALSE}
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ vector of animals  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-animals <- c("blue tang", "red panda", "Blue jay",
-             "green sea turtle", "blue morpho butterfly", 
-             "Blue iguana", "Red squirrel")
-
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ initialize empty vector to store blue-colored animals  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-blue_animals <- c()
-
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ sort blue animals into their own list  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-for (i in 1:length(animals)){
-  
-  current_animal <- animals[i]
-  
-  if(isTRUE(str_detect(current_animal, "blue"))){
-    
-    message("The '", current_animal, "' is a blue animal")
-    
-    blue_animals <- current_animal
-    
-  }
-  
-}
-
-```
-
----
-
-## Problem 2 (a solution)
-
-**Goal:** Modify the following code such that it sorts any **blue** animals from the `animals` vector into the `blue_animals` vector.
-
-```{r echo = TRUE, eval = FALSE}
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ vector of animals  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-animals <- c("blue tang", "red panda", "Blue jay",
-             "green sea turtle", "blue morpho butterfly", 
-             "Blue iguana", "Red squirrel")
-
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ initialize empty vector to store blue-colored animals  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-blue_animals <- c()
-
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##  ~ sort blue animals into their own list  ----
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-for (i in 1:length(animals)){
-  
-  current_animal <- animals[i]
-  
-  if(isTRUE(str_detect(current_animal, "(?i)blue"))){ #<<
-    
-    message("The '", current_animal, "' is a blue animal")
-    
-    blue_animals <- append(blue_animals, current_animal) #<<
-    
-  }
-  
-}
-```
-
----
-## Problem 3 (slide 1/2)
+## Problem 2 (slide 1/2)
 
 **Goal:** Modify the following code (on slide 2/2) to recreate the plot below
 
@@ -832,51 +759,50 @@ knitr::include_graphics("media/penguin_plot.png")
 ]
 
 ---
-## Problem 3 (slide 2/2)
+## Problem 2 (slide 2/2)
 
 ```{r echo = TRUE, eval = FALSE}
 
-library(tidyverse)
-library(palmerpenguins)
+library(tidyverse) # a collection of data wrangling & visualization packages
+library(palmerpenguins) # contains the 'penguins' data set
 
-ggplot(data = penguins, aes(x = species, y = body_mass_g), shape = sex) +
+ggplot(data = penguins, aes(x = species, y = body_mass_g)) + 
   geom_point(alpha = 0.2, position = position_jitterdodge(dodge.width = 0.8)) + 
-
+  
   # means & standard devs
   stat_summary(mapping = aes(color = species),
-               fun = "mean", geom = "point", size = 4) +
+               fun = "mean", geom = "point", size = 4,
+               position = position_dodge(width = 0.8)) +
   stat_summary(mapping = aes(color = species),
                fun = "mean", geom = "errorbar", size = 1, width = 0.2,
                fun.max = function(x) mean(x) + sd(x),
-               fun.min = function(x) mean(x) - sd(x)) +
-
+               fun.min = function(x) mean(x) - sd(x),
+               position = position_dodge(width = 0.8)) +
+  
   # change colors/shapes
-  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90"), name = "Species") + 
-  scale_shape_manual(values = c(15, 16), name = "Sex") + 
+  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90")) + 
+  scale_shape_manual(values = c(15, 16)) + 
   
   # add nicer axis labels + title + caption
-  labs(x = "Penguin Species", 
-       y = "Body Mass (g)",
-       title = "Body mass of female vs. male adelie, chinstrap, and gentoo penguins",
+  labs(title = "Body mass of female vs. male adelie, chinstrap, and gentoo penguins",
        subtitle = "Colored points represent mean body mass (± SD)",
        caption = "Data Source: Dr. Kristen Gorman, LTER Palmer Station") +
- 
   theme_classic() + 
   theme(
-        plot.title = element_rect(hjust = 0, size = 14),
-        axis.text = element_text(color = "black", size = 10),
-        axis.title = element_rect(color = "black", size = 14),
-        plot.caption = element_text(size = 7, hjust = 1, color = "gray", face = "italic"),
-        panel.border = element_rect(color = "black", size = 0.7, fill = NA))
+    plot.title = element_rect(hjust = 0, size = 14),
+    axis.text = element_text(color = "black", size = 10),
+    axis.title = element_rect(color = "black", size = 14),
+    plot.caption = element_text(size = 7, hjust = 1, color = "gray", face = "italic"),
+    panel.border = element_rect(color = "black", size = 0.7, fill = NA))
 ```
 
 ---
-## Problem 3 (a solution)
+## Problem 2 (a solution)
 
 ```{r echo = TRUE, eval = FALSE}
 
-library(tidyverse)
-library(palmerpenguins)
+library(tidyverse) # a collection of data wrangling & visualization packages
+library(palmerpenguins) # contains the 'penguins' data set
 
 ggplot(data = na.omit(penguins), aes(x = species, y = body_mass_g, shape = sex)) + #<<
   geom_point(alpha = 0.2, position = position_jitterdodge(dodge.width = 0.8)) + 
@@ -892,12 +818,12 @@ ggplot(data = na.omit(penguins), aes(x = species, y = body_mass_g, shape = sex))
                position = position_dodge(width = 0.8)) + #<<
 
   # change colors/shapes
-  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90"), name = "Species") + 
-  scale_shape_manual(values = c(15, 16), name = "Sex") + 
+  scale_color_manual(values = c("#FF8C02", "#A93FF1", "#148F90"), name = "Species") + #<<
+  scale_shape_manual(values = c(15, 16), name = "Sex") + #<<
   
   # add nicer axis labels + title + caption
-  labs(x = "Penguin Species", 
-       y = "Body Mass (g)",
+  labs(x = "Penguin Species", #<<
+       y = "Body Mass (g)", #<<
        title = "Body mass of female vs. male adelie, chinstrap, and gentoo penguins",
        subtitle = "Colored points represent mean body mass (± SD)",
        caption = "Data Source: Dr. Kristen Gorman, LTER Palmer Station") +
