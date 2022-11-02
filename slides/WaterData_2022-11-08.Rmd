@@ -61,9 +61,83 @@ National Center for Ecological Analysis & Synthesis<br>
 
 <br>
 
-<span style = 'font-size: 130%;'>ENV S 193SW Intro to Collecting & Exploiting Water Data | Fall 2022</span>   
+<span style = 'font-size: 130%;'>ENV 193SW Water Data | Fall 2022</span>   
 
 Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/samanthacsik/teach-me-how-to-google)
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+<br>
+
+.pull-left[
+```{r, out.width = '80%', echo = FALSE}
+knitr::include_graphics("media/headshot.jpg")
+```
+]
+
+.pull-right[
+`r fontawesome::fa("smile", fill = "#05859B", a11y = "sem")` I'm Sam Csik (pronounced "chick")
+
+<br>
+
+`r fontawesome::fa("cat", fill = "#05859B", a11y = "sem")` `r fontawesome::fa("cat", fill = "#05859B", a11y = "sem")` `r fontawesome::fa("dog", fill = "#05859B", a11y = "sem")` I have two cats and a dog 
+
+<br>
+
+`r fontawesome::fa("hiking", fill = "#05859B", a11y = "sem")` Hiking is my favorite pastime 
+
+<br>
+
+`r fontawesome::fa("palette", fill = "#05859B", a11y = "sem")` I recently took up pottery (check out [SBCC's School of Extended Learning](https://www.sbcc.edu/extendedlearning/) for lots of *free* classes)
+]
+
+<br>
+
+--
+
+I *never* imagined that I'd be an environmental data scientist (let alone teach others about it).
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+```{r, out.width = '100%', echo = FALSE}
+knitr::include_graphics("media/BS.png")
+```
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+```{r, out.width = '100%', echo = FALSE}
+knitr::include_graphics("media/MS.png")
+```
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+```{r, out.width = '100%', echo = FALSE}
+knitr::include_graphics("media/colearning.png")
+```
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+```{r, out.width = '100%', echo = FALSE}
+knitr::include_graphics("media/fellow.png")
+```
+
+---
+
+### But first, who am I and how'd I land myself here?
+
+```{r, out.width = '100%', echo = FALSE}
+knitr::include_graphics("media/DTC.png")
+```
 
 ---
 
