@@ -444,9 +444,9 @@ knitr::include_graphics("media/ggplot_help.png")
 
 <span style = 'font-size: 75%;'>What's included in documentation varies by function and package. Some other important components include:</span>
 
-  <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Usage:** shows the various arguments to need to specify. Some are necessary, some are optional. Default values are shown here (See `ggplot` example on [previous slide]())</span>
+  <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Usage:** shows the various arguments to need to specify. Some are necessary, some are optional. Default values are shown here (See `ggplot` example on [previous slide](https://samanthacsik.github.io/teach-me-how-to-google/slides/WaterData_2022-11-08.html#34))</span>
   
-  <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Arguments:** briefly describes what each argument is/takes as a value (See `ggplot` example on [previous slide]())</span> 
+  <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Arguments:** briefly describes what each argument is/takes as a value (See `ggplot` example on [previous slide](https://samanthacsik.github.io/teach-me-how-to-google/slides/WaterData_2022-11-08.html#34))</span> 
 
   <span style = 'font-size: 65%;'>`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Value:** describes the output of a function</span> 
 
