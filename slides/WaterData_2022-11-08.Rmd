@@ -97,13 +97,15 @@ knitr::include_graphics("media/headshot.jpg")
 
 --
 
-I *never* imagined that I'd be an environmental data scientist (let alone teach others about it).
+<span style = 'font-size: 90%;'>I *never* imagined that I'd be an environmental data scientist (let alone teach others about it).</span>
 
 ---
 
 ### But first, who am I and how'd I land myself here?
 
-```{r, out.width = '100%', echo = FALSE}
+<br>
+
+```{r, out.width = '120%', echo = FALSE}
 knitr::include_graphics("media/BS.png")
 ```
 
@@ -111,7 +113,9 @@ knitr::include_graphics("media/BS.png")
 
 ### But first, who am I and how'd I land myself here?
 
-```{r, out.width = '100%', echo = FALSE}
+<br>
+
+```{r, out.width = '120%', echo = FALSE}
 knitr::include_graphics("media/MS.png")
 ```
 
@@ -119,7 +123,9 @@ knitr::include_graphics("media/MS.png")
 
 ### But first, who am I and how'd I land myself here?
 
-```{r, out.width = '100%', echo = FALSE}
+<br>
+
+```{r, out.width = '120%', echo = FALSE}
 knitr::include_graphics("media/colearning.png")
 ```
 
@@ -127,7 +133,9 @@ knitr::include_graphics("media/colearning.png")
 
 ### But first, who am I and how'd I land myself here?
 
-```{r, out.width = '100%', echo = FALSE}
+<br>
+
+```{r, out.width = '120%', echo = FALSE}
 knitr::include_graphics("media/fellow.png")
 ```
 
@@ -135,9 +143,23 @@ knitr::include_graphics("media/fellow.png")
 
 ### But first, who am I and how'd I land myself here?
 
-```{r, out.width = '100%', echo = FALSE}
+<br>
+
+```{r, out.width = '120%', echo = FALSE}
 knitr::include_graphics("media/DTC.png")
 ```
+
+---
+### Joining co-learning communities can be invaluable in your growth as data scientists
+
+.center[
+```{r, out.width = '90%', echo = FALSE}
+knitr::include_graphics("media/colearning_communities.png")
+```
+.center[
+<span style = 'font-size: 80%;'>Learn more about these awesome, local (Santa Barbara-area) professional development and coding communities: [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barbara/), [Santa Barbara Women in STEM](https://www.sbwomeninstem.org/), [UCSB Carpentries](https://ucsbcarpentry.github.io/), the [Data Analysis and Coding Club (DANC)](https://www.instagram.com/danc.ucsb/?hl=en), & [Central Coast Python](meetup.com/central-coast-python/).</span>
+]
+]
 
 ---
 
@@ -185,6 +207,7 @@ knitr::include_graphics("media/ron_swanson.gif")
 
 ### But the goal is to be a bit more at peace with that feeling...and have the confidence that you can find your way
 
+<br>
 <br>
 
 .center2[
