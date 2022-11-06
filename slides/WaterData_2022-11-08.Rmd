@@ -729,7 +729,7 @@ waterData2021 <- read_csv("data/y2021_waterData.csv")
 waterData2020_2021 <- rbind(waterData2020, waterData2021)
 ```
 
-<span style = 'font-size: 80%;'>You don't need to create excessively long variable names, but being clear is important -- plus RStudio's autocomplete functionality makes retyping longer variable names a breeze!</span>
+<span style = 'font-size: 80%;'>You don't need to create excessively long variable names, but being clear is important -- don't sacrifice clarity for shorter names (plus RStudio's autocomplete functionality makes retyping longer variable names a breeze).</span>
 
 ---
 
