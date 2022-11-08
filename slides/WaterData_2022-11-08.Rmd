@@ -458,7 +458,7 @@ knitr::include_graphics("media/ggplot_help.png")
 
 <span style = 'font-size: 75%;'>Some packages will also have **vignettes**, which provide more detailed descriptions of how functions within a package should be used. Googling `package_name vignette` will usually get you there (e.g. check out the [`dplyr` vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)). Alternatively, package documentation on [CRAN](https://cran.r-project.org/)<sup>1</sup> will typically include any vignettes that are associated with that package (e.g. find all `dplyr` vignettes [here](https://cran.r-project.org/web/packages/dplyr/index.html)).</span>
 
-<span style = 'font-size: 60%;'><sup>1</sup>[CRAN](https://cran.r-project.org/) stands for the **C**omprehensive **R** **A**rchive **N**etwork and is R's central software repository -- in other words, it's where published R packages (including previous versions of published R packages) live. When you run `install.packages("package_name)`, the R (on your computer) reaches out to CRAN to find/install the latest version of that package on your computer.</span>
+<span style = 'font-size: 60%;'><sup>1</sup>[CRAN](https://cran.r-project.org/) stands for the **C**omprehensive **R** **A**rchive **N**etwork and is R's central software repository -- in other words, it's where published R packages (including previous versions of published R packages) live. When you run `install.packages("package_name)`, R (on your computer) reaches out to CRAN to find/install the latest version of that package on your computer.</span>
 ---
 
 ### <span style = 'font-size: 120%;'>`r fontawesome::fa("earlybirds", fill = "#05859B", a11y = "sem")`  Talk about it *out loud*</span>
