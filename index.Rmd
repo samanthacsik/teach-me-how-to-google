@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## **Teach Me How to Google**
 
-* [**Data Analysis and Coding Club (DAnC), UC Santa Barbara**](slides/DAnC_2023-05-17.html)   
+* [**Data Analysis and Coding Club (DAnC), UC Santa Barbara**](slides/DAnC-2023-05-17.html)   
 *May 17th, 2023*
 
 * [**ENV 193SW, Environmental Studies Program, UC Santa Barbara**](slides/WaterData_2022-11-08.html)   
