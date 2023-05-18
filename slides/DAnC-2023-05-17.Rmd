@@ -65,6 +65,10 @@ National Center for Ecological Analysis & Synthesis<br>
 
 Slides & source code available on [`r fontawesome::fa("github", fill = "#93C6C2", a11y = "sem")`](https://github.com/samanthacsik/teach-me-how-to-google)
 
+.footnote[
+[Original talk](https://github.com/UCSB-MEDS/teach-me-how-to-google) developed for the [Master of Environmental Data Science Program](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) (MEDS) at UC Santa Barbara's Bren School of Environmental Science and Management.
+]
+
 ---
 
 ### But first, who am I and how'd I land myself here?
