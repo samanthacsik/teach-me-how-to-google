@@ -8,6 +8,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## **Teach Me How to Google**
 
+* [**UCSB Faculty Seminar Series, NCEAS Learning Hub**](slides/openS-2023-10-10.html)    
+*October 10th, 2023*
+
 * [**Data Analysis and Coding Club (DAnC), UC Santa Barbara**](slides/DAnC-2023-05-17.html)    
 *May 17th, 2023*
 
