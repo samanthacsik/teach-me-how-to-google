@@ -503,6 +503,14 @@ I'll also note that I tend to combine this 'rubber ducky debugging' method with 
 
 --
 
+
+<span style = 'font-size: 100%;'>`r fontawesome::fa("github-square", fill = "#05859B", a11y = "sem")`  Explore package source code on GitHub</span>
+ 
+  - <span style = 'font-size: 75%;'>this may include looking at any issues or pull requests associated with that package to check if there are known problems (e.g. check out `xaringan` on [GitHub](https://github.com/yihui/xaringan))</span>
+  - <span style = 'font-size: 75%;'>check to see if there are wikis available for a particular repository (e.g. I was able to figure out how to wrap code output on `xaringan` slides thanks to one of their [wikis](https://github.com/yihui/xaringan/wiki/Word-wrapping-of-code-output))</span>
+
+--
+
 <span style = 'font-size: 100%;'>`r fontawesome::fa("calendar", fill = "#05859B", a11y = "sem")`  Check the date of online solutions</span>
 
   - <span style = 'font-size: 75%;'>past solutions can become outdated quickly -- target recent posts and responses</span>
