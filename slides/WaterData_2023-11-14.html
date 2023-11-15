@@ -796,7 +796,7 @@ data1 &lt;- read_csv("data/y2020_waterData.csv")
 data2 &lt;- read_csv("data/y2021_waterData.csv")
 
 # combine data using the `rbind()` function (assume both csv files have the same structure)
-data3 &lt;- rbind(waterData2020, waterData2021)
+data3 &lt;- rbind(data1, data2)
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##                                    Good!                                 ----
